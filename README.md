@@ -71,6 +71,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- Hat tip to [Gregoire Vella](https://www.behance.net/gregoirevella) whose original design idea was used.
 - Heartfelt thanks to Microverse
 
 ## 📝 License

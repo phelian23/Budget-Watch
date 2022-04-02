@@ -2,7 +2,7 @@ class TransactionsController < ApplicationController
   # GET /transactions or /transactions.json
   def index
     @category = Category.find(params[:category_id])
-    @transactions = @category.transactions
+    @transactions = @category.transactions.order(created_at: :desc)
   end
 
   # GET /transactions/1 or /transactions/1.json
