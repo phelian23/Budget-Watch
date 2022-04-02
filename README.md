@@ -12,6 +12,10 @@
 
 ## Links
 
+live App [here](https://calm-depths-32104.herokuapp.com/)
+
+[Video link](https://www.loom.com/share/69b8cd826fd74e29aa308ad51d7798fd)
+
 > <em>In progress...</em>
 
 ## Getting Started

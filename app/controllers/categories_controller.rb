@@ -19,12 +19,12 @@ class CategoriesController < ApplicationController
   # POST /categories or /categories.json
   def create
     @category = current_user.categories.create(category_params)
-      if @category.save
-        flash[:success] = 'Category created succesfully'
-        redirect_to root_path
-      else
-        render 'new'
-      end
+    if @category.save
+      flash[:success] = 'Category created succesfully'
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
 
   def destroy
