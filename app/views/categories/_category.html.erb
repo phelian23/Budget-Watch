@@ -1,0 +1,13 @@
+<%= link_to category_transactions_path(category.id) do %>
+<div id="<%= dom_id category %>" class="category">
+  <div class="cat-img">
+    <%= image_tag category_img(category) %>
+  </div>
+  
+  <p class="cat-name">
+    <strong><%= category.name %></strong>
+    
+    <span>$ <%= category.transactions.all.sum(:amount) %></span>
+  </p>
+</div>
+<% end %>
