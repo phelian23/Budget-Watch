@@ -80,7 +80,7 @@ a {
   text-align: right;
 }
 
-form {
+.forms-cont {
   margin-top: 5%;
   padding: 0 3%;
   border-top: 1.5px solid #6f757c;
@@ -147,6 +147,15 @@ form {
   display: flex;
   justify-content: space-between;
   width: 78%;
+}
+
+.delet-btn {
+  background-color: #3778c2;
+  color: #fff;
+  padding: 6%;
+  border: 0;
+  margin: 4%;
+  border-radius: 5px;
 }
 
 .new-form {

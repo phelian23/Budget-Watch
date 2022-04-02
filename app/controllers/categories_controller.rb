@@ -27,6 +27,13 @@ class CategoriesController < ApplicationController
       end
   end
 
+  def destroy
+    @category = Category.find(params[:id])
+    @category.destroy
+    flash[:success] = 'Category deleted successfully'
+    redirect_to root_path
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.

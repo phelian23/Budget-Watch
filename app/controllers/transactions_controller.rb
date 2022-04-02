@@ -33,6 +33,14 @@ class TransactionsController < ApplicationController
     end
   end
 
+  def destroy
+    @category = Category.find(params[:category_id])
+    @transaction = Transaction.find(params[:id])
+    @transaction.destroy
+    flash[:success] = 'Category deleted successfully'
+    redirect_to category_transactions_path(@category.id)
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.

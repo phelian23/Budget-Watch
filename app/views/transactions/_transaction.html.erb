@@ -7,4 +7,6 @@
     <strong><%= transaction.name %></strong>
     <span>$ <%= transaction.amount %></span>
   </p>
+  <%= button_to "Delete", category_transaction_path(category_id: @category.id, id: transaction.id), method: :delete, 
+                    data: {confirm: 'Are you sure?'}, class: "delet-btn" %>
 </div>

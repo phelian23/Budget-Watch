@@ -9,5 +9,7 @@
     
     <span>$ <%= category.transactions.all.sum(:amount) %></span>
   </p>
+  <%= button_to "Delete", category_path(category.id), method: :delete, 
+                    data: {confirm: 'Are you sure?'}, class: "delet-btn" %>
 </div>
 <% end %>
