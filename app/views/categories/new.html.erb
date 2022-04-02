@@ -1,0 +1,13 @@
+<div class='header'>
+<div class="col1">
+<a href='/'><i class="fa-solid fa-angle-left"></i></a>
+</div>
+<div class="col2">
+<h4 class='title'>Add New Category</h4>
+</div>
+<div class="col3">
+<p><%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+</div>
+</div>
+
+<%= render "form", category: @category %>

@@ -1,0 +1,31 @@
+<div class='header'>
+<div class="col1">
+<a href='/'><i class="fa-solid fa-angle-left"></i></a>
+</div>
+<div class="col2">
+<h4 class='title'>Transactions</h4>
+</div>
+<div class="col3">
+<p><%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+</div>
+</div>
+
+<p style="color: green"><%= notice %></p>
+<div class="cat-user">
+<h3><%= @category.name %></h3>
+<p>$ <%= @transactions.all.sum(:amount) %></p>
+</div>
+<% if @transactions.empty? %>
+  <p>This category has no transactions yet.</p>
+<% end %>
+<div id="transactions">
+  <% @transactions.each do |transaction| %>
+    <%= render transaction %>
+  <% end %>
+</div>
+
+<div class="new-form">
+<div class="new-form-btn">
+<%= link_to "New transaction", new_category_transaction_path %>
+</div>
+</div>
