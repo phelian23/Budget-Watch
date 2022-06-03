@@ -1,0 +1,29 @@
+<%= form_with model: [@category, @category.transactions.create] do |form| %>
+  <% if transaction.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+
+      <ul>
+        <% transaction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.text_field :name, placeholder: "Transaction name", class: "input-field" %>
+  </div>
+
+  <div>
+    <%= form.collection_select :category_id, Category.all, :id, :name, { include_blank: "Select Category" }, class: "input-field" %>
+  </div>
+
+  <div>
+    <%= form.number_field :amount, step: :any, placeholder: "Price", class: "input-field" %>
+  </div>
+
+  <div>
+    <%= form.submit class: "button" %>
+  </div>
+<% end %>
